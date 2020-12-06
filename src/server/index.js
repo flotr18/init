@@ -1,6 +1,7 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
 
 const server = express();
@@ -8,6 +9,8 @@ const server = express();
 const dbname = 'asperger';
 
 server.use(express.static('dist'));
+
+server.use(cors())
 
 
 
