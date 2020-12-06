@@ -1,13 +1,12 @@
 const express = require("express");
 const MongoClient = require("mongodb").MongoClient;
 const bodyParser = require("body-parser");
-const path = require("path"); //to join path between files
+const cors = require("cors");
 const server = express();
 // the value for dbname should match your database name
 const dbname = "asperger";
 
-server.use(express.static(path.join(__dirname + "/../../build"))); // I ran "npm run build", it will give me 'build' folder
-// Your server is in src/serer, so to server 'build' we have to go out server then src to reach to 'build'
+server.use(cors());
 
 const dbroute =
   process.env.MONGODB_URL ||
@@ -31,8 +30,8 @@ server.use(bodyParser.json());
 server.post("/", (req, res) => {
   db.collection("contact").insertOne(req.body, (err, result) => {
     if (err) throw err;
-    console.log(req.body);
     console.log("created in database");
+    console.log(result);
     res.redirect("/");
   });
 });
