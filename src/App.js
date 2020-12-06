@@ -35,7 +35,7 @@ class App extends Component {
 
     //use axios to send a POST request to the server which includes the state information for the new user to be created
     axios
-      .post("http://localhost:3000", this.state)
+      .post("http://localhost:5000/", this.state)
       //on success go to home
       .then((res) => this.props.history.push("/"))
       .catch((error) => {
