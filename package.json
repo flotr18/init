@@ -4,7 +4,8 @@
   "description": "MERN full stack demo",
   "main": "src/server/index.js",
   "scripts": {
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "dev": "concurrently \"npm run start\" \"node src/server/index.js\""
   },
   "author": "Erika Volodko",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "bulma": "^0.8.2",
+    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "eslint": "^7.15.0",
     "express": "^4.17.1",
