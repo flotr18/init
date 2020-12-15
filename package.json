@@ -6,7 +6,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "dev": "concurrently \"npm run start\" \"node src/server/index.js\""
+    "dev": "npm run build && nodemon src/server/index.js"
   },
   "author": "Erika Volodko",
   "license": "ISC",
