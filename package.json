@@ -5,9 +5,7 @@
   "main": "src/server/index.js",
   "scripts": {
     "build": "react-scripts build",
-    "start": "npm run build && node src/server/index.js",
-    "client": "react-scripts start",
-    "server": "nodemon src/server/index.js"
+    "server": "node src/server/index.js"
   },
   "author": "Erika Volodko",
   "license": "ISC",
