@@ -36,12 +36,14 @@ class App extends Component {
     //use axios to send a POST request to the server which includes the state information for the new user to be created
 
     axios
+
       .post("/", this.state)
       //on success go to home
       .then((res) => this.props.history.push("/"))
       .catch((error) => {
         console.log(error);
       });
+
   }
 
   render() {
