@@ -4,8 +4,7 @@
   "description": "MERN full stack demo",
   "main": "src/server/index.js",
   "scripts": {
-    "build": "react-scripts build",
-    "server": "node src/server/index.js"
+    "build": "react-scripts build"
   },
   "author": "Erika Volodko",
   "license": "ISC",
