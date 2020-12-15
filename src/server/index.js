@@ -1,13 +1,13 @@
 const express = require("express");
 const MongoClient = require("mongodb").MongoClient;
 const bodyParser = require("body-parser");
-const cors = require("cors");
+const path = require("path");
 const server = express();
 // the value for dbname should match your database name
 const dbname = "asperger";
 const PORT = process.env.PORT || 5000;
 
-server.use(cors());
+server.use(express.static(path.join(__dirname + "/../../build")));
 
 const dbroute =
   process.env.MONGODB_URL ||
